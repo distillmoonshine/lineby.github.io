@@ -14,6 +14,8 @@
 }
 
 .App-header {
+  position: relative;
+  background: radial-gradient(92.84% 63.81% at 146.64% 100%, #F1C58E 0%, rgba(241, 197, 142, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(80.8% 96.74% at -13.59% 25.92%, rgba(48, 123, 246, 0.4) 0%, rgba(225, 247, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FCFDFF;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -36,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+
