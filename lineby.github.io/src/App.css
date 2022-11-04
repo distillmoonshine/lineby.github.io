@@ -1,4 +1,76 @@
-.App {
+/* Fonts */
+@font-face {
+  font-family: "ArticulatCF-Bold";
+  font-style: "Bold";
+  src: local("ArticulatCF-Bold"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-DemiBold";
+  font-style: "DemiBold";
+  src: local("ArticulatCF-DemiBold"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-DemiBold.woff) format("woff");
+}
+
+
+@font-face {
+  font-family: "ArticulatCF-ExtraBold";
+  font-style: "ExtraBold";
+  src: local("ArticulatCF-ExtraBold"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-ExtraBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-ExtraLight";
+  font-style: "ExtraLight";
+  src: local("ArticulatCF-ExtraLight"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-ExtraLight.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-Light";
+  font-style: "Heavy";
+  src: local("ArticulatCF-Heavy"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-Heavy.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-Light";
+  font-style: "Light";
+  src: local("ArticulatCF-Light"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-Medium";
+  font-style: "Medium";
+  src: local("ArticulatCF-Medium"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-Normal";
+  font-style: "Normal";
+  src: local("ArticulatCF-Normal"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-Normal.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-Regular";
+  font-style: "Regular";
+  src: local("ArticulatCF-Regular"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "ArticulatCF-Thin";
+  font-style: "Thin";
+  src: local("ArticulatCF-Thin"), 
+    url(./fonts/ArticulatCF/Webfont/ArticulatCF-Thin.woff) format("woff");
+}
+
+/*.App {
   text-align: center;
 }
 
@@ -15,7 +87,7 @@
 
 .App-header {
   position: relative;
-  background: radial-gradient(92.84% 63.81% at 146.64% 100%, #F1C58E 0%, rgba(241, 197, 142, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(80.8% 96.74% at -13.59% 25.92%, rgba(48, 123, 246, 0.4) 0%, rgba(225, 247, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FCFDFF;
+  background: radial-gradient(92.84% 63.81% at 146.64% 100%, #F1C58E 0%, rgba(241, 197, 142, 0) 100%), radial-gradient(80.8% 96.74% at -13.59% 25.92%, rgba(48, 123, 246, 0.4) 0%, rgba(225, 247, 254, 0) 100%), #FCFDFF;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -37,5 +109,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
+}*/
