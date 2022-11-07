@@ -7,10 +7,7 @@ import './App.css';
 import Home from './pages/Home';
 import Create from './pages/Create';
 import About from './pages/About';
-import Tech from './pages/Tech';
-
-
-
+import Business from './pages/Business';
 
 function App() {
   return (
@@ -19,7 +16,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/create' element={<Create />}/>
         <Route path='/about' element={<About />}/>
-        <Route path='/tech' element={<Tech />}/>
+        <Route path='/for_business' element={<Business />}/>
       </Routes>
     </BrowserRouter>
   );

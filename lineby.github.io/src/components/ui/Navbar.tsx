@@ -1,45 +1,75 @@
 import React from "react";
-import AOS from "aos";
+import {Link} from 'react-router-dom'
 
-interface Props {};
-interface State {
-    WindowWidth: number,
+interface ExternalHeaderProps {
+    Fixed: boolean,
+    TransparentTop: boolean,
 };
 
-class Navbar extends React.Component<Props, State>{
-    constructor (props: Props) {
+interface ExternalHeaderState {
+    Scroll: number,
+};
+
+class Navbar extends React.Component<ExternalHeaderProps, ExternalHeaderState>{
+    constructor (props: ExternalHeaderProps) {
         super(props);
-        this.state = {WindowWidth: 0,}
-        this.updateDimensions = this.updateDimensions.bind(this);
+        this.state = {Scroll: 0};
     };
 
+    listenToScroll = () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        const scrolled = winScroll / height
+
+        this.setState({Scroll: scrolled})
+    }
+
     componentDidMount() {
-        AOS.init({
-          duration: 2000
-        });
-        this.updateDimensions();
-        window.addEventListener("resize", this.updateDimensions);
+        window.addEventListener('Scroll', this.listenToScroll)
     }
     
     componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions);
+        window.removeEventListener('Scroll', this.listenToScroll);
     }
 
-    updateDimensions() {
-        let WindowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
-
-        this.setState({WindowWidth});
-    };
-
     render () {
-        const mini_line = {
-            background: "line",
-            color: "000000",
-            height: "1px"
+        const SmallLine = {
+            background: "#000000",
+            width: "5vw",
+            height: "1px",
+            margin: "2.3vw"
+        };
+        const LongLine = {background: "#000000", height: "1px"}
+        const Spacer = {
+            //opacity: "0",
+            //width: "0.014vw"
+        };
+        const BlackLinkStyle = {
+            fontFamily: "ArticulatCF-DemiBold",
+            color: "#000000",
+            textAlign: "center",
+            textDecoration: "none",
+            margin: "2.3vw"
+        }
+
+        const BlueLinkStyle = {
+            fontFamily: "ArticulatCF-ExtraBold",
+            color: "#307BF6",
+            textAlign: "center",
+            textDecoration: "none",
+            margin: "2.3vw"
         }
 
         return <>
-            <hr style={mini_line}></hr>
+            <div style={{display: "flex",}}>
+                <Link style={BlueLinkStyle as React.CSSProperties} to="/create">Create</Link>
+                <hr style={SmallLine}/>
+                <Link style={BlackLinkStyle as React.CSSProperties} to="/for_business">For Business</Link>
+                <hr style={SmallLine}/>
+                <Link style={BlackLinkStyle as React.CSSProperties} to="/about">About</Link>
+                <hr style={LongLine}/>
+                <Link style={BlackLinkStyle as React.CSSProperties} to="/">LINEBY</Link>
+            </div>
         </>
     }
 }

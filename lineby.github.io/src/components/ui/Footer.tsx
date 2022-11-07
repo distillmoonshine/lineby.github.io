@@ -1,8 +1,14 @@
 import React from "react";
 
 function Footer() {
+    const footer = {
+        background: "#000000",
+    }
+
     return(
-        <h1>footer</h1>
+        <div style={footer}>
+           <p style={{fontFamily: "ArticulatCF-DemiBold", color: "#FFFFFF"}}>LINEBY</p>
+        </div>
     );
 }
 
